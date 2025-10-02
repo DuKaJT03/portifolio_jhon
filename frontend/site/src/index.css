@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    @apply bg-gradient-to-r from-[#2d5a19] via-[#000000] to-[#1b5b1f] bg-300 animate-gradient;
+  }
+
