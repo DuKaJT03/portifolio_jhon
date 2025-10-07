@@ -1,0 +1,11 @@
+# Ignorar dependências e builds
+node_modules/
+dist/
+dir/
+
+# Logs e caches
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.vscode/
+.DS_Store
