@@ -1,0 +1,32 @@
+name: Deploy Portifólio Jhon (Vite + React)
+
+on:
+  push:
+    branches:
+      - main # dispara o deploy quando você fizer git push main
+
+permissions:
+  contents: write # necessário para gravar na branch gh-pages
+
+jobs: 
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      
+      - name: Fazer build do projeto
+        working-directory: frontend/site
+        run: npm run build
+
+      - name: Publicar no GitHub Pages 
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: frontend/site/dist
