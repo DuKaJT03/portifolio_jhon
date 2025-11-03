@@ -23,7 +23,9 @@ jobs:
       
       - name: Fazer build do projeto
         working-directory: frontend/site
-        run: npm run build
+        run: |
+          npm ci
+          npx vite build
 
       - name: Publicar no GitHub Pages 
         uses: peaceiris/actions-gh-pages@v3
