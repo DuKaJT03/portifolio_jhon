@@ -145,13 +145,37 @@ export default function App() {
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-pink-500 to-yellow-500 opacity-0 group-hover:opacity-20 blur-xl transition duration-700"></div>
               {/* Conteúdo */}
               <div className="relative z-10">
-                <h4 className="text-2xl font-semibold mb-3">Projeto 1</h4>
+                <h4 className="text-2xl font-semibold mb-3">
+                  DK Store - Sistema Completo de E-Commerce
+                </h4>
                   <p className="text-gray-300 mb-6">
-                    Descrição curta do projeto 1 - stack usada, propósito e impacto.
+                    Sistema completo de e-commmerce desenvolvido com PHP e PostgreSQL, utilizando PDO com prepared statements para segurança contra SQL Injection.
+                    Implementação de autenticação com password_hash, controle de sessão, 
+                    relacionamento entre tabelas e deploy em ambiente cloud (Render).
                   </p>
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    <span className="text-xs bg-pink-500 px-3 py-1 rounded-full">PHP</span>
+                    <span className="text-xs bg-yellow-500 px-3 py-1 rounded-full">PostgreSQL</span>
+                    <span className="text-xs bg-blue-500 px-3 py-1 rounded-full">PDO</span>
+                    <span className="text-xs bg-green-500 px-3 py-1 rounded-full">Render</span>
+                  </div>
                   <div className="flex gap-4">
-                    <a href="#" target="_blank" className="px-5 py-2 rounded-lg bg-pink-500 hover:bg-pink-600 transition">Ver Online</a>
-                    <a href="#" target="_blank" className="px-5 py-2 rounded-lg border border-pink-500 hover:bg-pink-500 hover:text-white transition">Código</a>
+                    <a 
+                      href="https://loja-online-l0ba.onrender.com/login.html" 
+                      target="_blank"
+                      rel="noopener noreferrer" 
+                      className="px-5 py-2 rounded-lg bg-pink-500 hover:bg-pink-600 transition"
+                      >
+                        Ver Online
+                    </a>
+                    <a 
+                      href="https://github.com/DuKaJT03/loja-online" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="px-5 py-2 rounded-lg border border-pink-500 hover:bg-pink-500 hover:text-white transition"
+                    >
+                      Código
+                    </a>
                   </div>
               </div>
           </article>
