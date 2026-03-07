@@ -1,5 +1,5 @@
 import perfil from './assets/fotoPixelado.png';
-import { FaLinkedin, FaGithub, FaEnvelope, FaArrowUp } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaEnvelope, FaArrowUp} from 'react-icons/fa';
 import QRCode from 'react-qr-code';
 import { motion } from 'framer-motion';
 import { useState, useEffect} from 'react';
@@ -13,7 +13,7 @@ function MobileMenu(){
       if (e.key ===  'Escape') setOpen(false);
     }
     window.addEventListener('keydown', onKey);
-    return () => window.removeEventListener('ketdown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
   }, []);
 
   return (
@@ -24,23 +24,23 @@ function MobileMenu(){
         aria-label={open ? "Fechar menu" : "Abrir menu"}
         aria-expanded={open}
         title={open ? "Fechar menu" : "Abrir menu"}
-        className="md:hidden p-2 rounded-md text-white z-50"
+        className="md:hidden p-2 rounded-md text-[#F8EDD9] z-50"
       >
         {/* simples ícone: 3linhas */}
-        <div className="w-6 h-0.5 bg-white mb-1"></div>
-        <div className="w-6 h-0.5 bg-white mb-1"></div>
-        <div className="w-6 h-0.5 bg-white"></div>
+        <div className="w-6 h-0.5 bg-[#F8EDD9] mb-1"></div>
+        <div className="w-6 h-0.5 bg-[#F8EDD9] mb-1"></div>
+        <div className="w-6 h-0.5 bg-[#F8EDD9]"></div>
       </button>
 
       {/* menu mobile (aparece abaixo do nav) */}
       <div className={`md:hidden absolute top-full right-0 mt-2 w-56 bg-gray-900/85 backdrop-blur-md rounded-lg shadow-lg overflow-hidden transform transition-transform origin-top ${open ? 'scale-y-100' : 'scale-y-0'}`}
         style={{ transformOrigin:'top'}}
       >
-        <ul className="flex flex-col text-white p-4 gap-3">
-          <li><a onClick={() => setOpen(false)} href="#inicio" className="block py-2 px-3 rounded hover:bg-white/5">Inicio</a></li>
-          <li><a onClick={() => setOpen(false)} href="#sobremim" className="block py-2 px-3 rounded hover:bg-white/5">Sobre mim</a></li>
-          <li><a onClick={() => setOpen(false)} href="#projetos" className="block py-2 px-3 rounded hover:bg-white/5">Projetos</a></li>
-          <li><a onClick={() => setOpen(false)} href="#contato" className="block py-2 px-3 rounded hover:bg-white/5">Contato</a></li>
+        <ul className="flex flex-col text-[#F8EDD9] p-4 gap-3">
+          <li><a onClick={() => setOpen(false)} href="#inicio" className="block py-2 px-3 rounded hover:bg-[#F8EDD9]/5">Inicio</a></li>
+          <li><a onClick={() => setOpen(false)} href="#sobremim" className="block py-2 px-3 rounded hover:bg-[#F8EDD9]/5">Sobre mim</a></li>
+          <li><a onClick={() => setOpen(false)} href="#projetos" className="block py-2 px-3 rounded hover:bg-[#F8EDD9]/5">Projetos</a></li>
+          <li><a onClick={() => setOpen(false)} href="#contato" className="block py-2 px-3 rounded hover:bg-[#F8EDD9]/5">Contato</a></li>
         </ul>
       </div>
     </>
@@ -54,7 +54,7 @@ export default function App() {
       {/* Menu de navegação -NAVBAR FIXA */}
       <nav className="fixed top-0 left-0 w-full bg-gray-900/60 backdrop-blur-md px-6 py-3 flex items-center justify-between shadow-md z-50">
         <motion.h1
-          className="text-2xl font-bold text-yellow-400"
+          className="text-2xl font-bold text-[#F8EDD9]"
           initial={{ y: -30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.9, ease: "easeOut" }}
@@ -62,11 +62,11 @@ export default function App() {
           Jhon Dev
         </motion.h1>
 
-        <ul className="hidden md:flex gap-8 items-center text-white font-medium">
-          <li><a href="#inicio" className="hover:text-yellow-400 transition-colors duration-200">Inicio</a></li>
-          <li><a href="#sobremim" className="hover:text-pink-400 transition-colors duration-200">Sobre mim</a></li>
-          <li><a href="#projetos" className="hover:text-pink-400 transition-colors duration-200">Projetos</a></li>
-          <li><a href="#contato" className="hover:text-pink-400 transition-colors duration-200">Contato</a></li>
+        <ul className="hidden md:flex gap-8 items-center text-[#F8EDD9] font-medium">
+          <li><a href="#inicio" className="hover:text-[#B19F92] transition-colors duration-200">Inicio</a></li>
+          <li><a href="#sobremim" className="hover:text-[#B19F92] transition-colors duration-200">Sobre mim</a></li>
+          <li><a href="#projetos" className="hover:text-[#B19F92] transition-colors duration-200">Projetos</a></li>
+          <li><a href="#contato" className="hover:text-[#B19F92] transition-colors duration-200">Contato</a></li>
         </ul>
 
         {/* Botçao hamburguer para mobile */}
@@ -74,97 +74,137 @@ export default function App() {
       </nav>
 
       {/* espaçamento para não ficar embaixo da navbar fixa*/}
-      <div className="pt-16"></div>
+      <div className="pt-28"></div>
 
       {/* HERO / INICIO */}
-      <section id="inicio" className="flex flex-col items-center justify-center text-center px-4">
-        <div className="relative w-44 h-44 mb-6">
-          {/* anel neon (blur + spin) */}
-          <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-pink-500 to-yellow-400 opacity-60 blur-3xl animate-pulse animate-spin-slow"></div>
-          {/* Foto */}
-          <img 
-            src={perfil} 
-            alt="Foto de Jhon" 
-            className="relative w-44 h-44 border-4 border-transparent shadow-lg rounded-full "
-          />
-        </div>
-        
-        <h2 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-yellow-400 mb-3">
-          Oii, eu me chamo Jhon
-        </h2>
+      <section
+        id="inicio"
+        className="scroll-mt-28 max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between px-6 mt-10 gap-16"
+      >
 
-        <p className="text-lg max-w-2xl text-gray-200 italic">
-          Este é o meu cantinho onde deixo todas as minhas criações malucas para você me conhecer mais...
-        </p>
-      </section>
+  {/* TEXTO */}
+  <div className="text-center md:text-left max-w-xl">
+
+    <h2 className="text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-[#B19F92] to-[#B19F92] mb-4 font-glitch">
+      Holá, <br />
+      eu sou o Jhon <br />
+      Desenvolvedor de Software
+    </h2>
+  </div>
+
+
+  {/* FOTO */}
+  <div className="relative w-44 h-44">
+    {/* IMAGEM */}
+    <img
+      src={perfil}
+      alt="Foto de Jhon"
+      className="relative w-44 h-44 rounded-full shadow-lg border-4 border-transparent"
+    />
+
+  </div>
+
+</section>
 
       {/* Sobre mim */}
       <section id="sobremim" 
         data-aos="fade-up"
         data-aos-duration="1000"
-        className="max-w-5xl mx-auto mt-20 px-6 text-white">
+        className="scroll-mt-28 max-w-5xl mx-auto mt-20 px-6 text-[#F8EDD9]">
         <h3 
-          className="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-yellow-600 to-pink-600 text-center mb-10">
+          className="text-3xl font-semibold bg-clip-text text-[#F8EDD9] text-center mb-10">
             Sobre Mim
         </h3>
-        <motion.div 
+        <motion.article
           initial={{ opacity:0, y: 50}}
           whileInView={{ opacity:1, y:0}}
           transition={{ duration:1, ease: "easeOut"}}
           viewport={{ once: true}}
-          className="bg-white/10 backdrop-blur-lg rounded-2xl shadow-lg p-8 border border-pink-400/40 hover:border-yellow-400/60 transform hover:-translate-y-2 hover:shadow-green-800 transition duration-300"
+          className="relative group bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 shadow-lg hover:shadow-gray-500/40 hover:-translate-y-2 transition-all duration-500"
         >
-          <p className="text-lg text-gray-100 leading-relaxed text-justify">
-              Me chamo <strong className="text-yellow-300">Jhon Fabricio</strong>, sou formado em Ciência da Computação e estou me desenvolvendo como
-              <span className="text-pink-400 font-semibold"> desenvolvedor fullstack</span>. <br /><br />
-              Sempre fui motivado por <span className="text-yellow-400">desafios</span>, 
-              <span className="text-pink-400"> raciocínio lógico</span>, 
-              <span className="text-green-400"> criação de software</span>. Acredito que tecnologia é a ponte para transformar ideias em soluções reais.
+
+          <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-800 to-blue-900 opacity-0 group-hover:opacity-20 blur-xl transition duration-700"></div>
+
+          <div className="relative z-10 hover:-translate-y-2 hover:shadow-gray-500/40 transition-all duration-500">
+            <p className="text-lg text-[#F8EDD9] leading-relaxed text-justify">
+              Me chamo <strong className="text-gray-500 font-extrabold">Jhon Fabricio</strong>, sou formado em Ciência da Computação e estou me desenvolvendo como
+              <span className="text-[#B19F92] font-semibold"> desenvolvedor fullstack</span>. <br /><br />
+
+              Sempre fui motivado por <span className="text-[#B19F92] font-semibold">desafios</span>,
+              <span className="text-[#B19F92] font-semibold"> raciocínio lógico</span>,
+              <span className="text-[#B19F92] font-semibold"> criação de software</span>.
+              Acredito que tecnologia é a ponte para transformar ideias em soluções reais.
               <br /><br />
-              Nos meus momentos livres, adoro 
-              <span className="text-blue-300"> jogar futebol</span> e 
-              <span className="text-purple-300"> sair com amigos</span>.
+
+              Nos meus momentos livres, gosto de
+              <span className="text-[#B19F92] font-semibold"> jogar futebol</span> e
+              <span className="text-[#B19F92] font-semibold"> sair com amigos</span>.
               Este portfólio é meu espaço para compartilhar projetos, evolução e sonhos no mundo da programação.
             </p>
-        </motion.div>
+          </div>
+
+        </motion.article>
       </section>
 
       {/* Projetos */}
-      <section id="projetos" className="max-w-6xl mx-auto mt-20 p-6 text-white">
+      <section id="projetos" className="scroll-mt-28 max-w-6xl mx-auto mt-20 p-6 text-[#F8EDD9]">
         <h3 className="text-3xl font-extrabold mb-12 text-center">
-          <span className="bg-gradient-to-r from-pink-400 to-yellow-400 bg-clip-text text-transparent">
+          <span  className="text-3xl font-semibold bg-clip-text text-[#F8EDD9] text-center mb-10">
             Meus Projetos
           </span>
         </h3>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-1 gap-10 max-w-2xl mx-auto">
 
           {/* Card Projeto 1 */}
-          <article className="relative group bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-lg hover:shadow-pink-500/40 hover:-translate-y-2 transition-all duration-500">
+          <article className="relative group bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-lg hover:shadow-gray-500/40 hover:-translate-y-2 transition-all duration-500">
             {/* Borda Neon escondida */}
-            <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-pink-500 to-yellow-500 opacity-0 group-hover:opacity-20 blur-xl transition duration-700"></div>
+            <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-800 to-blue-900 opacity-0 group-hover:opacity-20 blur-xl transition duration-700"></div>
               {/* Conteúdo */}
               <div className="relative z-10">
                 <h4 className="text-2xl font-semibold mb-3">
-                  DK Store - Sistema Completo de E-Commerce
+                  Sistema Completo de E-Commerce (PHP + PostgreSQL)
                 </h4>
-                  <p className="text-gray-300 mb-6">
+                  <p className="text-[#F8EDD9] mb-6">
                     Sistema completo de e-commmerce desenvolvido com PHP e PostgreSQL, utilizando PDO com prepared statements para segurança contra SQL Injection.
                     Implementação de autenticação com password_hash, controle de sessão, 
                     relacionamento entre tabelas e deploy em ambiente cloud (Render).
                   </p>
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    <span className="text-xs bg-pink-500 px-3 py-1 rounded-full">PHP</span>
-                    <span className="text-xs bg-yellow-500 px-3 py-1 rounded-full">PostgreSQL</span>
-                    <span className="text-xs bg-blue-500 px-3 py-1 rounded-full">PDO</span>
-                    <span className="text-xs bg-green-500 px-3 py-1 rounded-full">Render</span>
+                  <div className="flex flex-wrap gap-2 mb-6 text-xs">
+                    <span className="px-2 py-1 bg-green-600 rounded-md">
+                      Produção
+                    </span>
+                    <span className="px-2 py-1 bg-blue-600 rounded-md">
+                      Deploy Cloud
+                    </span>
+                    <span className="bg-gray-500 px-2 py-1 rounded-md">
+                      PHP
+                    </span>
+                    <span className=" bg-purple-600 px-2 py-1 rounded-md">
+                      PostgreSQL
+                    </span>
+                    <span className="bg-pink-600 px-2 py-1 rounded-md">
+                      PDO Prepared Statement
+                    </span>
+                    <span className=" bg-green-800 px-2 py-1 rounded-md">
+                      Render
+                    </span>
+                    <span className=" bg-indigo-600 px-2 py-1 rounded-md">
+                      Password Hash
+                    </span>
+                    <span className=" bg-yellow-600 px-2 py-1 rounded-md">
+                      Sessions
+                    </span>
+                    <span className=" bg-red-600 px-2 py-1 rounded-md">
+                      SQL Injection Protection
+                    </span>
                   </div>
                   <div className="flex gap-4">
                     <a 
                       href="https://loja-online-l0ba.onrender.com/login.html" 
                       target="_blank"
                       rel="noopener noreferrer" 
-                      className="px-5 py-2 rounded-lg bg-pink-500 hover:bg-pink-600 transition"
+                      className="px-5 py-2 rounded-lg bg-[#3d5b75] hover:bg-[#01103A] transition"
                       >
                         Ver Online
                     </a>
@@ -172,41 +212,25 @@ export default function App() {
                       href="https://github.com/DuKaJT03/loja-online" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="px-5 py-2 rounded-lg border border-pink-500 hover:bg-pink-500 hover:text-white transition"
+                      className="px-5 py-2 rounded-lg border hover:bg-gray-800 hover:text-white transition"
                     >
                       Código
                     </a>
                   </div>
               </div>
           </article>
-
-          {/* Card Projeto 2 */}
-          <article className="relative group bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-lg hover:shadow-yellow-500/40  hover:-translate-y-2 transition-all duration-500">
-            <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-yellow-400 to-pink-500 opacity-0 group-hover:opacity-20 blur-xl transition duration-700"></div>
-            
-            <div className="relative z-10">
-              <h4 className="text-2xl font-semibold mb-3">Projeto 2</h4>
-                <p className="text-gray-300 mb-6">
-                  Descrição do projeto 2. Fala um pouco sobre o que ele faz.
-                </p>
-              <div className="flex gap-4">
-                <a href="#" target="_blank" className="px-5 py-2 rounded-lg bg-yellow-500 hover:bg-yellow-600 transition">Ver Online</a>
-                <a href="#" target="_blank" className="px-4 py-2 rounded-lg border border-yellow-500 hover:bg-yellow-500 hover:text-white transition">Código</a>
-              </div>
-            </div>
-          </article>
         </div>
       </section>
 
       {/* Contato */}
-      <section id="contato" className="max-w-4xl mx-auto mt-20 px-6 text-white text-center">
+      <section id="contato" className="scroll-mt-28 max-w-4xl mx-auto mt-20 px-6 text-white text-center">
         <h3 className="text-3xl font-extrabold mb-6">
-          <span className="bg-gradient-to-r from-blue-400 to-pink-400 bg-clip-text text-transparent">
+          <span className="text-3xl font-semibold bg-clip-text text-[#F8EDD9] text-center mb-10">
             Contato
           </span>
         </h3>
 
-        <p className="mb-10 text-gray-300">
+        <p className="mb-10 text-[#F8EDD9]">
           Vamos conversar? Estou aberto para novas oportunidades e colaborações!
         </p>
 
@@ -230,7 +254,7 @@ export default function App() {
     <a 
       href="#inicio" 
       aria-label="Voltar ao topo"
-      className="fixed bottom-6 right-6 w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-r from-pink-500 to-yellow-400 text-white shadow-lg hover:scale-110 transition-transform z-50"
+      className="fixed bottom-6 right-6 w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-r from-blue-900 to-blue-800 text-[#F8EDD9] shadow-lg hover:scale-110 transition-transform z-50"
     >
       < FaArrowUp />
     </a>

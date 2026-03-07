@@ -7,6 +7,6 @@ html {
 }
 
 body {
-    @apply bg-gradient-to-r from-[#2d5a19] via-[#000000] to-[#1b5b1f] bg-300 animate-gradient;
+    font-family: 'Mulish', sans-serif;
+    @apply bg-gradient-to-r from-[#01103A] via-[#000000] to-[#01103A] bg-300 animate-gradient;
   }
-

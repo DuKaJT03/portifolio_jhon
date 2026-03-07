@@ -7,6 +7,11 @@ export default {
   ],
   theme: {
     extend: {
+
+    fontFamily: {
+      glitch: ['"Rubik Glitch"', 'system-ui'],
+      main: ['Mulish', 'sans-serif'],
+    },
       keyframes: {
         gradient: {
           "0%": { backgroundPosition: "0% 50%" },
