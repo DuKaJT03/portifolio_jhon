@@ -38,8 +38,8 @@ function MobileMenu(){
       >
         <ul className="flex flex-col text-[#F8EDD9] p-4 gap-3">
           <li><a onClick={() => setOpen(false)} href="#inicio" className="block py-2 px-3 rounded hover:bg-[#F8EDD9]/5">Inicio</a></li>
-          <li><a onClick={() => setOpen(false)} href="#sobremim" className="block py-2 px-3 rounded hover:bg-[#F8EDD9]/5">Sobre mim</a></li>
           <li><a onClick={() => setOpen(false)} href="#projetos" className="block py-2 px-3 rounded hover:bg-[#F8EDD9]/5">Projetos</a></li>
+          <li><a onClick={() => setOpen(false)} href="#sobremim" className="block py-2 px-3 rounded hover:bg-[#F8EDD9]/5">Sobre mim</a></li>
           <li><a onClick={() => setOpen(false)} href="#contato" className="block py-2 px-3 rounded hover:bg-[#F8EDD9]/5">Contato</a></li>
         </ul>
       </div>
@@ -64,8 +64,8 @@ export default function App() {
 
         <ul className="hidden md:flex gap-8 items-center text-[#F8EDD9] font-medium">
           <li><a href="#inicio" className="hover:text-[#B19F92] transition-colors duration-200">Inicio</a></li>
-          <li><a href="#sobremim" className="hover:text-[#B19F92] transition-colors duration-200">Sobre mim</a></li>
           <li><a href="#projetos" className="hover:text-[#B19F92] transition-colors duration-200">Projetos</a></li>
+          <li><a href="#sobremim" className="hover:text-[#B19F92] transition-colors duration-200">Sobre mim</a></li>
           <li><a href="#contato" className="hover:text-[#B19F92] transition-colors duration-200">Contato</a></li>
         </ul>
 
@@ -106,58 +106,18 @@ export default function App() {
 
 </section>
 
-      {/* Sobre mim */}
-      <section id="sobremim" 
-        data-aos="fade-up"
-        data-aos-duration="1000"
-        className="scroll-mt-28 max-w-5xl mx-auto mt-20 px-6 text-[#F8EDD9]">
-        <h3 
-          className="text-3xl font-semibold bg-clip-text text-[#F8EDD9] text-center mb-10">
-            Sobre Mim
-        </h3>
-        <motion.article
-          initial={{ opacity:0, y: 50}}
-          whileInView={{ opacity:1, y:0}}
-          transition={{ duration:1, ease: "easeOut"}}
-          viewport={{ once: true}}
-          className="relative group bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 shadow-lg hover:shadow-gray-500/40 hover:-translate-y-2 transition-all duration-500"
-        >
-
-          <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-800 to-blue-900 opacity-0 group-hover:opacity-20 blur-xl transition duration-700"></div>
-
-          <div className="relative z-10 hover:-translate-y-2 hover:shadow-gray-500/40 transition-all duration-500">
-            <p className="text-lg text-[#F8EDD9] leading-relaxed text-justify">
-              Me chamo <strong className="text-gray-500 font-extrabold">Jhon Fabricio</strong>, sou formado em Ciência da Computação e estou me desenvolvendo como
-              <span className="text-[#B19F92] font-semibold"> desenvolvedor fullstack</span>. <br /><br />
-
-              Sempre fui motivado por <span className="text-[#B19F92] font-semibold">desafios</span>,
-              <span className="text-[#B19F92] font-semibold"> raciocínio lógico</span>,
-              <span className="text-[#B19F92] font-semibold"> criação de software</span>.
-              Acredito que tecnologia é a ponte para transformar ideias em soluções reais.
-              <br /><br />
-
-              Nos meus momentos livres, gosto de
-              <span className="text-[#B19F92] font-semibold"> jogar futebol</span> e
-              <span className="text-[#B19F92] font-semibold"> sair com amigos</span>.
-              Este portfólio é meu espaço para compartilhar projetos, evolução e sonhos no mundo da programação.
-            </p>
-          </div>
-
-        </motion.article>
-      </section>
-
       {/* Projetos */}
-      <section id="projetos" className="scroll-mt-28 max-w-6xl mx-auto mt-20 p-6 text-[#F8EDD9]">
+      <section id="projetos" className="scroll-mt-28 max-w-full mx-auto mt-20 p-6 text-[#F8EDD9]">
         <h3 className="text-3xl font-extrabold mb-12 text-center">
           <span  className="text-3xl font-semibold bg-clip-text text-[#F8EDD9] text-center mb-10">
             Meus Projetos
           </span>
         </h3>
 
-        <div className="grid grid-cols-1 md:grid-cols-1 gap-10 max-w-2xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2  gap-8 max-w-5xl mx-auto">
 
           {/* Card Projeto 1 */}
-          <article className="relative group bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-lg hover:shadow-gray-500/40 hover:-translate-y-2 transition-all duration-500">
+          <article className="h-full flex flex-col justify-between max-w-md w-full mx-auto relative group bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-lg hover:shadow-gray-500/40 hover:-translate-y-2 transition-all duration-500">
             {/* Borda Neon escondida */}
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-800 to-blue-900 opacity-0 group-hover:opacity-20 blur-xl transition duration-700"></div>
               {/* Conteúdo */}
@@ -219,7 +179,116 @@ export default function App() {
                   </div>
               </div>
           </article>
+          {/* Card Projeto 2 */}
+          <article className="h-full flex flex-col justify-between max-w-md w-full mx-auto relative group bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-lg hover:shadow-gray-500/40 hover:-translate-y-2 transition-all duration-500">
+            {/* Borda Neon escondida */}
+            <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-800 to-blue-900 opacity-0 group-hover:opacity-20 blur-xl transition duration-700"></div>
+              {/* Conteúdo */}
+              <div className="relative z-10">
+                <h4 className="text-2xl font-semibold mb-3">
+                  Sistema de Gerenciamento de Tarefas (Fullstack)
+                </h4>
+                  <p className="text-[#F8EDD9] mb-6">
+                    Aplicação fullstack para gerenciamento de tarefas, com frontend interativo consumindo uma API REST 
+                    desenvolvida em Java com Spring Boot. Permite criar, listar, atualizar e deletar tarefas em tempo real.
+                  </p>
+                  <div className="flex flex-wrap gap-2 mb-6 text-xs ">
+                    <span className="px-2 py-1 bg-green-600 rounded-md">
+                      Java 17
+                    </span>
+                    <span className="px-2 py-1 bg-blue-600 rounded-md">
+                      Spring Boot
+                    </span>
+                    <span className="bg-gray-500 px-2 py-1 rounded-md">
+                      JPA / Hibernate
+                    </span>
+                    <span className=" bg-purple-600 px-2 py-1 rounded-md">
+                      PostgreSQL
+                    </span>
+                    <span className="bg-pink-600 px-2 py-1 rounded-md">
+                      REST API
+                    </span>
+                    <span className=" bg-indigo-600 px-2 py-1 rounded-md">
+                      Docker
+                    </span>
+                    <span className=" bg-yellow-600 px-2 py-1 rounded-md">
+                      Render
+                    </span>
+                    <span className=" bg-red-600 px-2 py-1 rounded-md">
+                      Vercel
+                    </span>
+                  </div>
+                  <div className="flex gap-4 mt-20">
+                    <a 
+                      href="https://tarefas-frontend-psi.vercel.app" 
+                      target="_blank"
+                      rel="noopener noreferrer" 
+                      className="px-5 py-2 rounded-lg bg-[#3d5b75] hover:bg-[#01103A] transition"
+                      >
+                        Aplicação
+                        (Frontend)
+                    </a>
+                    <a 
+                      href="https://tarefas-api-8ein.onrender.com/tarefas" 
+                      target="_blank"
+                      rel="noopener noreferrer" 
+                      className="px-5 py-2 rounded-lg border hover:bg-gray-800 hover:text-white transition"
+                      >
+                        API
+                        (Backend)
+                    </a>
+                    <a 
+                      href="https://github.com/DuKaJT03/tarefas-api" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="mt-5 px-5 py-2 rounded-lg border hover:bg-gray-800 hover:text-white transition"
+                    >
+                      Código
+                    </a>
+                  </div>
+              </div>
+          </article>
         </div>
+      </section>
+
+      {/* Sobre mim */}
+      <section id="sobremim" 
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        className="scroll-mt-28 max-w-5xl mx-auto mt-20 px-6 text-[#F8EDD9]">
+        <h3 
+          className="text-3xl font-semibold bg-clip-text text-[#F8EDD9] text-center mb-10">
+            Sobre Mim
+        </h3>
+        <motion.article
+          initial={{ opacity:0, y: 50}}
+          whileInView={{ opacity:1, y:0}}
+          transition={{ duration:1, ease: "easeOut"}}
+          viewport={{ once: true}}
+          className="relative group bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 shadow-lg hover:shadow-gray-500/40 hover:-translate-y-2 transition-all duration-500"
+        >
+
+          <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-800 to-blue-900 opacity-0 group-hover:opacity-20 blur-xl transition duration-700"></div>
+
+          <div className="relative z-10 hover:-translate-y-2 hover:shadow-gray-500/40 transition-all duration-500">
+            <p className="text-lg text-[#F8EDD9] leading-relaxed text-justify">
+              Me chamo <strong className="text-gray-500 font-extrabold">Jhon Fabricio</strong>, sou formado em Ciência da Computação e estou me desenvolvendo como
+              <span className="text-[#B19F92] font-semibold"> desenvolvedor fullstack</span>. <br /><br />
+
+              Sempre fui motivado por <span className="text-[#B19F92] font-semibold">desafios</span>,
+              <span className="text-[#B19F92] font-semibold"> raciocínio lógico</span>,
+              <span className="text-[#B19F92] font-semibold"> criação de software</span>.
+              Acredito que tecnologia é a ponte para transformar ideias em soluções reais.
+              <br /><br />
+
+              Nos meus momentos livres, gosto de
+              <span className="text-[#B19F92] font-semibold"> jogar futebol</span> e
+              <span className="text-[#B19F92] font-semibold"> sair com amigos</span>.
+              Este portfólio é meu espaço para compartilhar projetos, evolução e sonhos no mundo da programação.
+            </p>
+          </div>
+
+        </motion.article>
       </section>
 
       {/* Contato */}
